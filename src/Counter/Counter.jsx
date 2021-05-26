@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './Counter.css';
 
 export class Counter extends Component {
 
@@ -30,7 +31,7 @@ export class Counter extends Component {
             <div>
                 <h3 data-testid="header" >My Counter</h3>
 
-                <h2 data-testid="counter">
+                <h2 data-testid="counter" className={`${this.state.count >= 100 ? "green" : ""}${this.state.count <= -100 ? "red" : ""}`}>
                     {this.state.count}
                 </h2>
 
